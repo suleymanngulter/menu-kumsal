@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kumsal Restaurant güncel fiyat listesi" />
+  <title>Kumsal Restaurant — Fiyat Listesi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="header">
+    <div class="header__brand">
+      <div class="logo" aria-hidden="true">
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="48" cy="14" r="8" fill="#f4c430" opacity="0.9"/>
+          <path d="M8 52 Q20 38 32 44 Q44 50 56 40 L56 56 L8 56 Z" fill="#2d6a4f"/>
+          <path d="M28 44 L32 20 L36 44 Z" fill="#1b4332"/>
+          <ellipse cx="32" cy="50" rx="24" ry="4" fill="#4a90c2" opacity="0.5"/>
+        </svg>
+      </div>
+      <div class="header__titles">
+        <h1>Kumsal Restaurant</h1>
+        <p class="header__subtitle">menü</p>
+      </div>
+    </div>
+    <p class="header__tagline">Güncel fiyat listesi</p>
+  </header>
+
+  <nav class="nav" aria-label="Kategori filtresi">
+    <div class="nav__inner">
+      <button class="nav__btn active" data-category="all">Tümü</button>
+      <button class="nav__btn" data-category="alkol">Alkol</button>
+      <button class="nav__btn" data-category="mezeler">Mezeler</button>
+      <button class="nav__btn" data-category="icecekler">İçecekler</button>
+      <button class="nav__btn" data-category="atistirmalik">Atıştırmalık</button>
+      <button class="nav__btn" data-category="ana-yemek">Ana Yemek</button>
+    </div>
+  </nav>
+
+  <main class="main" id="menu-root"></main>
+
+  <footer class="footer">
+    <div class="footer__date">12.6.2024</div>
+    <p class="footer__note">tarihinde fiyatlar güncellenmiştir.</p>
+  </footer>
+
+  <script src="js/menu-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
