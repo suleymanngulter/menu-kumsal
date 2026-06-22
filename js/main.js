@@ -1,5 +1,28 @@
 const menuRoot = document.getElementById("menu-root");
 const navButtons = document.querySelectorAll(".nav__btn");
+const themeToggle = document.getElementById("theme-toggle");
+const THEME_KEY = "kumsal-theme";
+
+function getTheme() {
+  return document.documentElement.getAttribute("data-theme") === "light"
+    ? "light"
+    : "dark";
+}
+
+function setTheme(theme) {
+  document.documentElement.setAttribute("data-theme", theme);
+  localStorage.setItem(THEME_KEY, theme);
+  themeToggle.setAttribute(
+    "aria-label",
+    theme === "dark" ? "Açık moda geç" : "Koyu moda geç"
+  );
+}
+
+themeToggle.addEventListener("click", () => {
+  setTheme(getTheme() === "dark" ? "light" : "dark");
+});
+
+setTheme(getTheme());
 
 function formatPrice(price) {
   if (price === null || price === undefined) {
