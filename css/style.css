@@ -363,19 +363,19 @@ body {
 }
 
 .theme-toggle__icon--sun {
-  display: none;
+  display: block;
 }
 
 .theme-toggle__icon--moon {
-  display: block;
+  display: none;
 }
 
 [data-theme="light"] .theme-toggle__icon--sun {
-  display: block;
+  display: none;
 }
 
 [data-theme="light"] .theme-toggle__icon--moon {
-  display: none;
+  display: block;
 }
 
 /* Responsive — mobile first tweaks */
