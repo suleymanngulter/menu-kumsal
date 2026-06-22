@@ -378,6 +378,23 @@ body {
   display: block;
 }
 
+/* Make the intent unambiguous (show the *next* theme icon). */
+[data-theme="dark"] .theme-toggle__icon--sun {
+  display: block !important;
+}
+
+[data-theme="dark"] .theme-toggle__icon--moon {
+  display: none !important;
+}
+
+[data-theme="light"] .theme-toggle__icon--sun {
+  display: none !important;
+}
+
+[data-theme="light"] .theme-toggle__icon--moon {
+  display: block !important;
+}
+
 /* Responsive — mobile first tweaks */
 @media (max-width: 639px) {
   .header {
